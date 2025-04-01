@@ -1,29 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Nosifer');
+
 body {
   text-align: center;
   background-color: #1a1a1a; /* Темний фон для моторошної атмосфери */
   color: #e6e6e6; /* Світлий текст для контрасту */
   font-family: 'Press Start 2P', cursive;
   overflow: hidden; /* Щоб не було прокручування */
+  background-image: url('/assets/imgs/castlevania-lords-of-shadow-castlevania-dracula-wallpaper-e1b2f9f0b09367958d91272ba27e7daf.jpg'); /* Ваша картинка */
+  background-size: cover; /* Покриває весь екран */
+  background-position: center center; /* Центрує картинку */
+  background-attachment: fixed;
 }
 
+
 #level-title {
-  font-size: 3rem;
+  font-size: 2rem;
+  font-family: 'Nosifer', cursive;
+
   margin: 5%;
   color: #ff4444; /* Червоний колір для заголовка */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Тінь для додаткової моторошності */
 }
 
-.container {
-  display: block;
-  width: 50%;
-  margin: auto;
+#high-scores {
+
+
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 240px;
+  min-width: 240px;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#high-scores th, #high-scores td {
+  padding: 5px;
+  max-width: 50px;         /* Обмежуємо максимальну ширину */
+  word-wrap: break-word;   /* Переносимо текст, якщо він не вміщається */
+  overflow: hidden; 
+
+}
+
+/* SCSS Vars
+ *
+ * 1. Colors, $a(outline), $b(body), $c(eyes)
+ * 2. Modify $size for different bat sizes.
+ * 3. Modify $speed for different speeds.
+ */
+/* 1 */
+/* 1 */
+/* 1 */
+/* 2 */
+/* 3 */
+/* Scaffolding */
+
+
+/* Bat */
+
+
+
+.container { 
+ display: flex;
+ justify-content: center;
+ align-items: center; /* Вирівнюємо гру по вертикалі */
+  height: 100%; /* Займає всю висоту екрану */
+  gap: 50px;
+}
+
+.game {
+  display: flex;
+  gap: 20px;
+}
+
+.score-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 50px;
+  width: 250px;
+ 
+  border-radius: 8px;
+}
+.game-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .btn {
   margin: 25px;
   display: inline-block;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   border: 5px solid #800000; /* Темно-червона рамка для кнопок */
   border-radius: 20%;
   background-color: #3b3b3b; /* Темно-сірий фон для кнопок */

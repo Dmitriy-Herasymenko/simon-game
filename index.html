@@ -5,43 +5,68 @@
   <meta charset="utf-8">
   <title>Simon</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/bat.css">
+  <link rel="stylesheet" href="continiue.css">
+
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 
 <body>
+
   <h1 id="level-title">Press A Key to Start</h1>
-  <div class="container">
-    <div class="row">
-      <div id="green" class="btn green"></div>
-      <div id="red" class="btn red"></div>
-    </div>
+  <div class="container" id="game-section">
+    <div class="game">
+      <div class="game-container">
+        <div class="row">
+          <div id="green" class="btn green"></div>
+          <div id="red" class="btn red"></div>
+        </div>
+    
+        <div class="row">
+          <div id="yellow" class="btn yellow"></div>
+          <div id="blue" class="btn blue"></div>
+        </div>
+      </div>
 
-    <div class="row">
-      <div id="yellow" class="btn yellow"></div>
-      <div id="blue" class="btn blue"></div>
     </div>
+   
+  
   </div>
+  <div class="score-container">
 
+    <!-- Таблиця для збереження імен і рівнів -->
+    <h2>High Scores</h2>
+    <div class="bat bat-left"></div>
+    <div class="bat bat-right"></div>
+    <table id="high-scores">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Level</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+      </tbody>
+    </table>
+
+  </div>
   <!-- Форма для введення імені після програшу -->
-  <div id="game-over-section" style="display:none;">
+  <div id="game-over-section" style="display: none;">
     <label for="username">Enter your name:</label>
     <input type="text" id="username" placeholder="Your Name">
     <button id="submit-name">Submit</button>
   </div>
 
-  <!-- Таблиця для збереження імен і рівнів -->
-  <h2>High Scores</h2>
-  <table id="high-scores">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Level</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Дані будуть додаватися тут -->
-    </tbody>
-  </table>
+
+
+
+
+
+
+  
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="game.js" charset="utf-8"></script>
